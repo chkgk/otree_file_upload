@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block content %}
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        // We need to make sure the form has the correct enctype set. It is no set by default.
+        $('#form').prop('enctype', 'multipart/form-data');
+    </script>
+{% endblock %}
