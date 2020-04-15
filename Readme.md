@@ -2,6 +2,9 @@
 ## Overview
 This demonstrates how you can handle file uploads and specifically image file uploads by participants in oTree experiments. It uses standard django fields and directly attaches the files to the player object.
 
+## Demo
+Here is a [simple demo](https://otree-file-upload.herokuapp.com).
+
 ## Requirements
 Make sure to add ```pillow``` to the ```requirements.txt``` if you want to handle image uploads.
 
