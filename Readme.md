@@ -45,6 +45,16 @@ class Upload(Page):
     form_fields = ['image', 'file']
 ```
 
+On the template used for the file upload, it is necessary to add a property to the ```<form>``` tag that is provided by oTree. This can be accomplished by adding the following script to the bottom of the template:
+
+```
+{% block scripts %}
+    <script type="text/javascript">
+        $('#form').prop('enctype', 'multipart/form-data');
+    </script>
+{% endblock %}
+```
+
 To display uploaded images or provide links to uploaded files in the templates, make sure to reference the ```url``` property of the field like this:
 ```html
 <img src="{{ player.image.url }}">
