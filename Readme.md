@@ -8,6 +8,14 @@ Here is a [simple demo](https://otree-file-upload.herokuapp.com).
 ## Requirements
 Make sure to add ```pillow``` to the ```requirements.txt``` if you want to handle image uploads.
 
+## Limitations
+If you are using this on Heroku, uploaded will be delated upon dyno restart. This happens every day and whenever the dynos go to "sleep". This has to do with the way dynos work. More on the issue [here](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted). Thanks to Chris on the oTree user group for [pointing this out](https://groups.google.com/d/msg/otree/yDfxRkRQZrk/pONH-c5MAgAJ).
+
+_In its current form, my implementation is only suitable for use on your own server / computer, where you can make sure that the files are stored safely and are not deleted periodically._
+
+Note that it is possible to [store uploads in AWS S3 Storage Buckets](https://devcenter.heroku.com/articles/s3-upload-python) when using Heroku, but I have not looked into this, yet.
+
+
 ## Usage
 Creata a ```media``` folder in your project and add the following to your ```settings.py```. Uploaded files will be stored in the media folder.
 ```python
