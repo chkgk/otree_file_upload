@@ -13,7 +13,7 @@ If you are using this on Heroku, uploaded will be delated upon dyno restart. Thi
 
 _In its current form, my implementation is only suitable for use on your own server / computer, where you can make sure that the files are stored safely and are not deleted periodically._
 
-Note that it is possible to [store uploads in AWS S3 Storage Buckets](https://devcenter.heroku.com/articles/s3-upload-python) when using Heroku, but I have not looked into this, yet.
+Note that it is possible to [store uploads in AWS S3 Storage Buckets](https://devcenter.heroku.com/articles/s3-upload-python) when using Heroku, but I have not looked into this, yet. A good starting point seems to be this [django app](https://github.com/bradleyg/django-s3direct) that provides a widget that handles uploads to S3 for you.
 
 
 ## Usage
